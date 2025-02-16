@@ -6,8 +6,8 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Modern Js Portfolio to learn Next.Js",
+  title: "Build With Krishan",
+  description: "Personal Portfolio to learn Next.Js",
 };
 
 export default function RootLayout({
