@@ -1,7 +1,7 @@
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import { ShimmerBtn , MagicButton} from "./ui/ShimmerBtn";
+import { ShimmerBtn, MagicButton } from "./ui/ShimmerBtn";
 import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
@@ -38,15 +38,15 @@ const Hero = () => {
             Experiances"
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Krishan, a Next.js Developer based in Croatia.
+            Hi! I&apos;m Krishan, Frontend Developer · React & Next.js
+            Specialist
           </p>
 
-
-          <a href="#about">
-            <MagicButton 
-            title="My Work" 
-            icon={<FaLocationArrow />}
-            position="right"
+          <a href="#projects">
+            <MagicButton
+              title="My Work"
+              icon={<FaLocationArrow />}
+              position="right"
             />
           </a>
         </div>

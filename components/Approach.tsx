@@ -13,21 +13,20 @@ const Approach = () => {
       </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card
-          title="Planning and stratagy"
-          icon={<AceternityIcon order="phase 1" />}
-          des="We'll collaborate to map out your website's goals, target audience, and key functionalities. We'll discuss things like site structure, navigation, and content requirements."
+          title="Discovery & Strategic Planning"
+          icon={<AceternityIcon order="Phase 1" />}
+          des="We’ll start by identifying your website’s goals, audience, and must-have features. Together, we’ll define the site’s structure, content flow, and user experience roadmap to ensure it aligns with your brand’s vision."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
             containerClassName="bg-emerald-900"
           />
         </Card>
+
         <Card
-          title="Development & Progress Update"
-          icon={<AceternityIcon order="phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
-          coding. From initial sketches to polished code, I keep you updated
-          every step of the way."
+          title="UI Development & Transparent Progress"
+          icon={<AceternityIcon order="Phase 2" />}
+          des="With the plan in place, I get into the zone—building the UI using clean, scalable code. Expect regular updates, previews, and collaboration throughout the development phase to ensure we’re always on the same page."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -39,12 +38,11 @@ const Approach = () => {
             dotSize={2}
           />
         </Card>
+
         <Card
-          title="Development & Launch"
-          icon={<AceternityIcon order="phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
-          I'll translate everything into functional code, building your website
-          from the ground up."
+          title="Final Development & Smooth Launch"
+          icon={<AceternityIcon order="Phase 3" />}
+          des="Once everything is polished and tested, I bring the full product to life. From performance optimizations to responsive layouts, the website is deployed seamlessly—ready for real users and real results."
         >
           <CanvasRevealEffect
             animationSpeed={3}
