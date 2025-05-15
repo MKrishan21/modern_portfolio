@@ -1,7 +1,7 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Skills", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -101,15 +101,22 @@ export const projects = [
       "/GitHub.png",
       "/exp.png",
     ],
-    link: "https://github.com/MKrishan21/ai-transcript",
+    link: "https://psyberscribe.zip2box.com/",
   },
   {
     id: 3,
     title: "Centralized Exchange",
     des: "Contributed to the frontend development of a fully-featured Centralized Exchange platform with integrated deposite & withdraw functionality, real-time trading, payments, and a credits system—built using the latest modern tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/JavaScript.png"],
-    link: "",
+    img: "/bitcash.png",
+    iconLists: [
+      "/re.svg",
+      "/tail.svg",
+      "/JavaScript.png",
+      "/tech/rest.png",
+      "/GitHub.png",
+      "/exp.png",
+    ],
+    link: "https://bitcashex.com/",
   },
   {
     id: 4,
@@ -123,34 +130,84 @@ export const projects = [
 
 export const testimonials = [
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: 1,
+    name: "next js",
+    img: "/tech/next.png",
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: 2,
+    name: "bitbucket",
+    img: "/tech/bit.png",
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: 3,
+    name: "css",
+    img: "/tech/css.png",
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: 4,
+    name: "express js",
+    img: "/tech/exp.png",
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    id: 5,
+    name: "git",
+    img: "/tech/git.png",
+  },
+  {
+    id: 6,
+    name: "github",
+    img: "/tech/gith.png",
+  },
+  {
+    id: 7,
+    name: "html",
+    img: "/tech/html.png",
+  },
+  {
+    id: 8,
+    name: "javascript",
+    img: "/tech/js.png",
+  },
+  {
+    id: 9,
+    name: "mongo db",
+    img: "/tech/mon.png",
+  },
+  {
+    id: 10,
+    name: "node js",
+    img: "/tech/node.png",
+  },
+  {
+    id: 11,
+    name: "react",
+    img: "/tech/react.png",
+  },
+  {
+    id: 12,
+    name: "rest api",
+    img: "/tech/rest.png",
+  },
+  {
+    id: 13,
+    name: "supabase",
+    img: "/tech/supa.png",
+  },
+  {
+    id: 14,
+    name: "tailwind",
+    img: "/tech/tail.png",
+  },
+  {
+    id: 15,
+    name: "typescript",
+    img: "/tech/ts.png",
+  },
+  {
+    id: 16,
+    name: "redux",
+    img: "/Redux.png",
   },
 ];
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -11,9 +12,9 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    quote: string;
     name: string;
-    title: string;
+    img:string;
+    id:number
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -80,14 +81,14 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          " flex min-w-full shrink-0 gap-16 py-4 w-max flex-nowrap",
+          " flex min-w-full shrink-0 gap-5 lg:gap-16 py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
         {items.map((item, idx) => (
           <li
-            className="w-[90vw] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 p-5 md:p-10 md:w-[60vw]"
+            className="w-[50vw] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-800 py-5  md:w-[10vw] flex items-center justify-center"
             style={{
               background: "rgb(4,7,29)",
               backgroundColor:
@@ -100,20 +101,17 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className=" relative z-20 text-sm md:text-lg leading-[1.6] text-white font-normal">
+              {/* <span className=" relative z-20 text-sm md:text-lg leading-[1.6] text-white font-normal">
                 {item.quote}
-              </span>
+              </span> */}
               <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <div className="me-3">
-                    <img src="/profile.svg" alt="profile" />
+                <span className="flex flex-col gap-2 items-center justify-center">
+                  <div className="">
+                    <Image width={100} height={100} src={item.img} alt="profile" className={`${item.id === 16 && "w-20"}`}/>
                   </div>
                   <div className="flex flex-col">
-                    <span className=" text-xl leading-[1.6] text-white font-bold">
+                    <span className=" text-xl leading-[1.6] text-white text-center font-bold uppercase">
                       {item.name}
-                    </span>
-                    <span className=" text-sm leading-[1.6] text-white-200 font-normal">
-                      {item.title}
                     </span>
                   </div>
                 </span>
