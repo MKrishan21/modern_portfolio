@@ -9,6 +9,7 @@ import { useState } from "react";
 import animationData from '@/data/confetti.json'
 import { MagicButton } from "./ShimmerBtn";
 import { IoCopyOutline } from "react-icons/io5";
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -50,9 +51,10 @@ export const BentoGridItem = ({
 }) => {
   const [copied, setCopied] = useState(false)
   const handleCopy = () => {
-    navigator.clipboard.writeText('kgmishra21@gmail.com')
-
-    setCopied(true)
+    if (typeof window !== 'undefined') {
+      navigator.clipboard.writeText('kgmishra21@gmail.com')
+      setCopied(true)
+    }
   }
 
   return (
@@ -70,9 +72,11 @@ export const BentoGridItem = ({
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className={`w-full h-full absolute ${id === 5 && "hidden md:block"}`}>
           {img && (
-            <img
+            <Image
               src={img}
               alt={img}
+              width={500}
+              height={500}
               className={cn(imgClassName, "object-cover, object-center")}
             />
           )}
@@ -83,9 +87,11 @@ export const BentoGridItem = ({
           }`}
         >
           {spareImg && (
-            <img
+            <Image
               src={spareImg}
               alt={spareImg}
+              width={500}
+              height={500}
               className={"object-cover, object-center w-full h-full"}
             />
           )}
