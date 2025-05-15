@@ -23,6 +23,14 @@ export const CanvasRevealEffect = ({
   dotSize?: number;
   showGradient?: boolean;
 }) => {
+  if (typeof window === 'undefined') {
+    return (
+      <div className={cn("h-full relative bg-white w-full", containerClassName)}>
+        <div className="h-full w-full" />
+      </div>
+    );
+  }
+
   return (
     <div className={cn("h-full relative bg-white w-full", containerClassName)}>
       <div className="h-full w-full">
@@ -196,7 +204,7 @@ const ShaderMaterial = ({
   let lastFrameTime = 0;
 
   useFrame(({ clock }) => {
-    if (!ref.current) return;
+    if (!ref.current || typeof window === 'undefined') return;
     const timestamp = clock.getElapsedTime();
     if (timestamp - lastFrameTime < 1 / maxFps) {
       return;
@@ -256,6 +264,8 @@ const ShaderMaterial = ({
 
   // Shader material
   const material = useMemo(() => {
+    if (typeof window === 'undefined') return null;
+    
     const materialObject = new THREE.ShaderMaterial({
       vertexShader: `
       precision mediump float;
@@ -280,6 +290,8 @@ const ShaderMaterial = ({
 
     return materialObject;
   }, [size.width, size.height, source, getUniforms]);
+
+  if (typeof window === 'undefined' || !material) return null;
 
   return (
     <mesh ref={ref as any}>

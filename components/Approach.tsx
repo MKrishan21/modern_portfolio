@@ -1,9 +1,12 @@
 "use client";
 import React from "react";
-
 import { AnimatePresence, motion } from "framer-motion";
-import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
+import dynamic from "next/dynamic";
 import { div } from "three/webgpu";
+
+const CanvasRevealEffect = dynamic(() => import("./ui/CanvasRevealEffect").then((m) => m.CanvasRevealEffect), {
+  ssr: false,
+});
 
 const Approach = () => {
   return (
@@ -15,7 +18,7 @@ const Approach = () => {
         <Card
           title="Discovery & Strategic Planning"
           icon={<AceternityIcon order="Phase 1" />}
-          des="We’ll start by identifying your website’s goals, audience, and must-have features. Together, we’ll define the site’s structure, content flow, and user experience roadmap to ensure it aligns with your brand’s vision."
+          des="We'll start by identifying your website's goals, audience, and must-have features. Together, we'll define the site's structure, content flow, and user experience roadmap to ensure it aligns with your brand's vision."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -26,7 +29,7 @@ const Approach = () => {
         <Card
           title="UI Development & Transparent Progress"
           icon={<AceternityIcon order="Phase 2" />}
-          des="With the plan in place, I get into the zone—building the UI using clean, scalable code. Expect regular updates, previews, and collaboration throughout the development phase to ensure we’re always on the same page."
+          des="With the plan in place, I get into the zone—building the UI using clean, scalable code. Expect regular updates, previews, and collaboration throughout the development phase to ensure we're always on the same page."
         >
           <CanvasRevealEffect
             animationSpeed={3}
